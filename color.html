@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Grid</title>
+  <style>
+    :root{
+      --container-width: 760px;   /* change to match desired size */
+      --tile-height: 160px;
+      --gap: 16px;
+      --radius: 6px;
+    }
+
+    body{
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: #f6f7fb;
+      margin: 40px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .frame{
+      width: var(--container-width);
+      background: white;
+      padding: 30px;
+      box-shadow: 0 6px 18px rgba(12,20,40,0.08);
+      border-radius: 8px;
+    }
+
+    h1{
+      font-size: 18px;
+      margin: 0 0 18px 0;
+      color: #1b2b4a;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: var(--tile-height);
+      gap: var(--gap);
+    }
+
+    .tile{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 34px;
+      border-radius: var(--radius);
+      position: relative;
+      box-shadow: inset 0 0 0 6px rgba(255,255,255,0.12);
+      /* white thin inner border effect */
+    }
+
+    /* Individual colors (choose/adjust as needed) */
+    .t1 { background: #12c6fb; }  /* 1 - cyan */
+    .t2 { background: #ff4a00; }  /* 2 - orange-red */
+    .t3 { background: #3b6ef0; }  /* 3 - blue */
+    .t4 { background: #ffd400; color: #fff; } /* 4 - yellow (keep white text) */
+    .t5 { background: #7d3bff; }  /* 5 - purple */
+    .t6 { background: #16c65b; }  /* 6 - green */
+    .t7 { background: #ff8f74; color: #fff; }  /* 7 - coral */
+    .t8 { background: #19a59a; }  /* 8 - teal */
+    .t9 { background: #6b0000; }  /* 9 - maroon */
+
+    /* if you want numbers with a dot like the screenshot */
+    .tile::after{
+      content: ".";
+      margin-left: 6px;
+      font-size: 28px;
+      opacity: 0.9;
+    }
+
+    /* center the grid on small screens */
+    @media (max-width: 820px){
+      :root { --container-width: 92vw; --tile-height: 120px; --gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame" role="region" aria-label="Simple grid example">
+    <h1>Simple Grid</h1>
+
+    <!-- grid layout matches the screenshot order:
+         top row: 2,3,4
+         middle: 5,6,1
+         bottom: 7,8,9
+    -->
+    <div class="grid">
+      <div class="tile t2">2</div>
+      <div class="tile t3">3</div>
+      <div class="tile t4">4</div>
+
+      <div class="tile t5">5</div>
+      <div class="tile t6">6</div>
+      <div class="tile t1">1</div>
+
+      <div class="tile t7">7</div>
+      <div class="tile t8">8</div>
+      <div class="tile t9">9</div>
+    </div>
+  </div>
+</body>
+</html>
