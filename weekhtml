@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Schedule Grid</title>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: #ffffff;
+        margin: 0;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .schedule-container {
+        width: 95%;
+        max-width: 1000px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px 30px 40px;
+        box-shadow: 0 0 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        font-family: "Comic Sans MS", cursive;
+        color: #2a2a2a;
+    }
+
+    /* GRID */
+    .grid {
+        display: grid;
+        grid-template-columns: 120px repeat(5, 1fr);
+        gap: 12px;
+        align-items: center;
+    }
+
+    /* Time column */
+    .time-box {
+        background: #b7eef8;
+        padding: 12px;
+        border-radius: 25px;
+        text-align: center;
+        font-weight: 600;
+        color: #1d3d53;
+    }
+
+    /* Day header */
+    .day-header {
+        background: #f8bcd8;
+        padding: 12px;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 17px;
+        color: #333;
+    }
+
+    /* Tuesday + Thursday different color */
+    .yellow {
+        background: #ffe590;
+    }
+
+    /* Empty schedule boxes */
+    .cell {
+        height: 45px;
+        background: #ffe6f2;
+        border-radius: 25px;
+    }
+
+    .cell-yellow {
+        background: #fff3b2;
+        border-radius: 25px;
+    }
+
+    /* Notes Section */
+    .note {
+        margin-top: 25px;
+        background: #b7eef8;
+        padding: 20px;
+        border-radius: 20px;
+        font-weight: 600;
+        color: #1d3d53;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="schedule-container">
+
+    <h1>Weekly schedule</h1>
+
+    <!-- HEADER ROW -->
+    <div class="grid">
+        <div></div>
+        <div class="day-header">Monday</div>
+        <div class="day-header yellow">Tuesday</div>
+        <div class="day-header">Wednesday</div>
+        <div class="day-header yellow">Thursday</div>
+        <div class="day-header">Friday</div>
+
+        <!-- TIME + CELLS -->
+        <!-- 08:00 -->
+        <div class="time-box">08:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 09:00 -->
+        <div class="time-box">09:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 10:00 -->
+        <div class="time-box">10:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 11:00 -->
+        <div class="time-box">11:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 12:00 -->
+        <div class="time-box">12:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 13:00 -->
+        <div class="time-box">13:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 14:00 -->
+        <div class="time-box">14:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 15:00 -->
+        <div class="time-box">15:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+
+        <!-- 16:00 -->
+        <div class="time-box">16:00</div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+        <div class="cell-yellow"></div>
+        <div class="cell"></div>
+    </div>
+
+    <!-- Note Section -->
+    <div class="note">Note:</div>
+
+</div>
+
+</body>
+</html>
